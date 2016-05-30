@@ -1,0 +1,57 @@
+
+<div  class="col-md-12">
+    <div class="row">
+  <div class="col-md-4">
+          <div class="form-group"><label ">continent Name</label>
+              <select ng-options="obj.name for obj in continents | orderBy:'name'"
+                      ng-model="continentName"
+                      ng-change="setCountry(continentName.name)">
+              </select>
+          </div>
+          <div class="form-group"><label >Country Name</label>
+              <select ng-options="country.name for country in countries | orderBy:'name'"
+                      ng-model="countryName"
+                      ng-change="setState(countryName.name)">
+              </select>
+          </div>
+          <div class="form-group"><label >City Name</label>
+              <select ng-options="state.name for state in states | orderBy:'name'"
+                      ng-model="stateName"
+                      ng-change="setTown(stateName.name)">
+              </select>
+          </div>
+          <div class="form-group"><label >City Name</label>
+              <select ng-options="town.name for town in towns | orderBy:'name'"
+                      ng-model="townName"
+                      ng-change="setWeather(townName.name)">
+              </select>
+          </div>
+
+        </div>
+  <div class="col-md-8"><div class="maincage commonwidth themecolor">
+    <div class="bgimagecage commonwidth">
+    <div class="locationselect">
+        </div>
+        <span class="tempvalue">{{weather.item.condition.temp + ' °F'}}</span>
+        <span class="date">{{weather.item.condition.date | date : 'medium'}}</span>
+        <div class="todayweather">
+        <div class="todayweatherinner">
+    		<span class="todayweathertxtfirst">Rain<b> | </b><i class="icon-up-open arrowsupdown"></i>{{weather.item.forecast[0].high}} °F <b> | </b><i class="icon-down-open arrowsupdown"></i>{{weather.item.forecast[0].low}} °F</span>
+    		<span class="todayweathertxtsecond">Humidity : {{weather.atmosphere.humidity}}%<br>Wind  :  {{weather.wind.speed + " " + weather.units.speed }}</span>
+    	</div>
+	</div>
+    <div class="dayscell themecolor">
+        <div class="dayscellinner">
+            <div class="daycol activeday" ng-repeat="forecast in weather.item.forecast | limitTo:7">
+            {{forecast.day}}<br />
+              <span class="smalldate">{{forecast.date}}</span><br />
+                <i class="icon-up-open arrowsupdown"></i>{{forecast.high}} °c<br/>
+                <i class="icon-down-open arrowsupdown"></i>{{forecast.low}} °c
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+</div>
+</div>
+

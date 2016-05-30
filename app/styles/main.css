@@ -1,0 +1,277 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/*theme css*/
+
+div.themecolor{
+    background: #3690b6;
+}
+div.maincage{
+    height:348px;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+div.maincage::after {
+    content: "";
+    background-size:cover;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.54;
+    background-size: 133%;
+    background-position-x: -87px;
+}
+div.bgimagecage{
+    height:349px;
+    z-index: -1;
+    text-align: center;
+}
+div.commonwidth, div.commonwidth::after {
+    width: 100%;
+}
+div.locationselect{
+    width: 100%;
+    text-align: center;
+    background: rgb(37, 37, 37);
+    padding: 12px 0px 12px 0px;
+}
+input.city{
+    padding: 5px 36px 5px 10px;
+    border-radius: 3px;
+    border:solid transparent 1px;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-family: lato;
+    font-size: 16px;
+    width: 33%;
+}
+input.city:hover{
+    border: solid rgb(184, 184, 184) 1px;
+}
+input.city::-webkit-input-placeholder {color:white;}
+:-moz-placeholder {color:white;opacity:  1;}
+::-moz-placeholder {color:white;opacity:  1;}
+:-ms-input-placeholder {color:white;}
+
+span.city{
+    padding: 5px 36px 5px 10px;
+    border-radius: 3px;
+    border: solid rgb(184, 184, 184) 1px;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-family: lato;
+    font-size: 16px;
+    width: 19%;
+}
+span.tempvalue{
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    float: left;
+    color: white;
+    letter-spacing: 0px;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-bottom: 0px;
+    margin-top: 34px;
+}
+span.date{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    float: left;
+    color: white;
+    padding: 36px 0 18px 0;
+}
+span.searchicon{
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    width: 20px;
+    margin-left: -35px;
+    cursor: pointer;
+    opacity: 0.6;
+    background: rgba(45, 122, 154, 0.2);
+}
+div.todayweather{
+    width:100%;
+    height:80px;
+    float:left;
+    background: rgb(37, 37, 37);
+}
+div.todayweatherinner{
+    height:80px;
+    display: table;
+    margin: 0 auto;
+    width:90%;
+    padding:10px 0px 10px 0px;
+    color: white;
+    line-height: 72px;
+}
+i.todayweathericon{
+    font-size: 60px;
+    opacity: 0.7;
+    float:left;
+    width: 20%;
+}
+i.centericon{
+    border-radius: 90px;
+    font-size:60px;
+    padding: 24px 20px 24px 20px;
+    background: rgba(0, 0, 0, 0.67);
+}
+span.todayweathertxtfirst{
+    font-size: 30px;
+    float: left;
+    width: 70%;
+    line-height: 61px;
+    text-align: left;
+    font-weight: 300;
+}
+span.todayweathertxtfirst b{
+    font-style:normal;
+    font-weight:100;
+    opacity:0.3;
+}
+i.arrowsupdown{
+    opacity:0.4;
+}
+span.todayweathertxtsecond{
+    font-size: 14px;
+    float:left;
+    width:30%;
+    line-height: 30px;
+}
+
+
+span.smalldate{
+    font-size:12px;
+}
+i.weekdayweathericon{
+    font-size: 30px;
+}
+div.daycol{
+    width: 14.2%;
+    padding: 10px 0 0px 0;
+    height: 91%;
+    float: left;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+div.activeday{
+    background: rgba(0, 0, 0, 0.33);
+    height: 90px;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    /* border-width: 1px; */
+    border-color: #3690B6;
+}
+div.dayscell{
+    float: left;
+    width: 100%;
+    height: 90px;
+}
+div.dayscellinner{
+    width: 100%;
+    height: 90px;
+    float: left;
+    margin-left: 2.5px;
+    background: rgba(0, 0, 0, 0);
+}
+.search{
+    position: relative;
+    top: -486px;
+    left: 723px;
+}
+.form-control {
+    display: block;
+    width: 45%;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    border-bottom: 0;
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
