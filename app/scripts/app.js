@@ -13,6 +13,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ui.select',
     'ngTouch'
   ])
   .config(function ($routeProvider) {

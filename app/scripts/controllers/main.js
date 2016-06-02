@@ -15,6 +15,7 @@ angular.module('WeatherApp')
             $scope.setState = setState;
             $scope.setTown = setTown;
             $scope.setWeather = setWeather;
+            $scope.world = {};
 
             yahooWeatherfactory.getContinentName().then(function(continents){
                 $scope.continents = continents.data.query.results.place;
@@ -22,29 +23,29 @@ angular.module('WeatherApp')
         }
 
 
-            function setCountry(name){
-                yahooWeatherfactory.getCountriesName(name).then(function(countries){
+            function setCountry(continent){
+                yahooWeatherfactory.getCountriesName(continent.name).then(function(countries){
                     $scope.countries = countries.data.query.results.place;
 
                 });
             }
 
             function setState(country){
-                yahooWeatherfactory.getStatesName(country).then(function(state){
+                yahooWeatherfactory.getStatesName(country.name).then(function(state){
                     $scope.states = state.data.query.results.place;
                 });
             }
 
 
             function setTown(state){
-                yahooWeatherfactory.getTownsName(state,$scope.countryName).then(function(cities){
+                yahooWeatherfactory.getTownsName(state.name,$scope.world.country).then(function(cities){
                     var town = _.filter(cities.data.query.results.place, function(o) { return o.placeTypeName.content === "Town"; });
                     $scope.towns = town;
                 });
             }
 
             function setWeather(town){
-                yahooWeatherfactory.getWeather(town,$scope.cName).then(function(weather){
+                yahooWeatherfactory.getWeather(town.name,$scope.world.country).then(function(weather){
                     $scope.weather = weather.data.query.results.channel;
                 });
             }
